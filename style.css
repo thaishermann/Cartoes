@@ -1,0 +1,152 @@
+/* style.css */
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #fff8e1;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #ff6f00;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+header h1 {
+  font-size: 2.5rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #fffde7;
+}
+
+/* Bandeirinhas decorativas */
+.bandeirinhas {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.bandeirinha {
+  width: 30px;
+  height: 40px;
+  background-color: #ff4081;
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%);
+  animation: balanco 2s infinite ease-in-out alternate;
+}
+
+.bandeirinha:nth-child(odd) {
+  background-color: #7c4dff;
+}
+
+.bandeirinha:nth-child(even) {
+  background-color: #ffd600;
+}
+
+@keyframes balanco {
+  from {
+    transform: rotate(-5deg);
+  }
+  to {
+    transform: rotate(5deg);
+  }
+}
+
+/* Conteúdo principal */
+main {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.descricao {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.descricao h2 {
+  font-size: 2rem;
+  color: #bf360c;
+  margin-bottom: 10px;
+}
+
+.atracoes h2 {
+  text-align: center;
+  color: #d84315;
+  margin-bottom: 20px;
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  border: 2px solid #ffcc80;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 300px;
+  text-align: center;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card h3 {
+  background-color: #ffe0b2;
+  padding: 10px;
+  color: #e65100;
+}
+
+.card p {
+  padding: 10px 15px;
+}
+
+/* Rodapé */
+footer {
+  background-color: #ff6f00;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}
